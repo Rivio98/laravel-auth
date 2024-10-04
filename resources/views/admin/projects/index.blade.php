@@ -20,7 +20,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($project as $project)
+                        @foreach ($projects as $project)
                             <tr>
                                 <td>{{ $project->id }}</td>
                                 <td>{{ $project->name }}</td>
