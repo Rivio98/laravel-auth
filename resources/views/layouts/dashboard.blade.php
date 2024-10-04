@@ -12,8 +12,8 @@
 
 <body>
     <div class="d-flex">
-        <div id="sidebar"></div>
         <div id="content">
+            @include('partials.sidebar')
             @include('partials.header')
             <main>
                 @yield('main-content')
