@@ -3,10 +3,11 @@
 #sidebar {
     width: 150px;
     height: 100vh;
+    border-right: 1px solid lightgray;
 }
 
 #content {
-    width: calc(100vh - 150px);
+    width: calc(100vw - 150px);
     height: 100vh;
 }
 
