@@ -40,7 +40,7 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
-        $form_data = $request->validate();
+        $form_data = $request->validated();
         $project = new Project();
         $form_data['slug'] = Project::generateSlug($form_data['name'], '-');
 
