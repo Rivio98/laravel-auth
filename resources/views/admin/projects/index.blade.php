@@ -3,38 +3,56 @@
 @section('main-content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12">
-                <div>
-                    <h2>Elenco progetti</h2>
-                    <a href="{{ route('admin.projects.create') }}" class="btn btn-primary my-4">Aggiungi progetto</a>
+            <div class="col-12 mb-4">
+                <h2 class="text-center">Elenco Progetti</h2>
+                <div class="text-center">
+                    <a href="{{ route('admin.projects.create') }}" class="btn btn-primary">Aggiungi Progetto</a>
                 </div>
             </div>
+
             <div class="col-12">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nome</th>
-                            <th>Slug</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($projects as $project)
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
                             <tr>
-                                <td>{{ $project->id }}</td>
-                                <td>{{ $project->name }}</td>
-                                <td>{{ $project->slug }}</td>
-                                <td>
-                                    <a href="{{ route('admin.projects.show', ['project' => $project->id]) }}";
-                                        class="btn btn-sm btn-primary">
-                                        <i class="fas fa-eye"></i>
-                                    </a>
-                                </td>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Slug</th>
+                                <th>Descrizione</th>
+                                <th>Azioni</th>
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach ($projects as $project)
+                                <tr>
+                                    <td>{{ $project->id }}</td>
+                                    <td>{{ $project->name }}</td>
+                                    <td>{{ $project->slug }}</td>
+                                    <td>{{ $project->description }}</td>
+                                    <td>
+                                        <a href="{{ route('admin.projects.show', $project->id) }}"
+                                            class="btn btn-sm btn-info" title="Visualizza">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        <a href="{{ route('admin.projects.edit', $project->id) }}"
+                                            class="btn btn-sm btn-primary" title="Modifica">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <form action="{{ route('admin.projects.destroy', $project->id) }}" method="POST"
+                                            class="d-inline"
+                                            onsubmit="return confirm('Sei sicuro di voler eliminare questo progetto?');">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger" title="Elimina">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
