@@ -1,7 +1,9 @@
 <div id="sidebar">
-    <ul class="list-unstyled">
-        <li>
-            <a href="{{ route('projects.index') }}">Progetti</a>
-        </li>
-    </ul>
+    <div class="d-flex justify-content-center pt-3">
+        <ul class="list-unstyled">
+            <li>
+                <a class="text-decoration-none" href="{{ route('projects.index') }}">Progetti</a>
+            </li>
+        </ul>
+    </div>
 </div>
