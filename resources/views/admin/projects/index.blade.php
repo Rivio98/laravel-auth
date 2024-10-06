@@ -6,7 +6,7 @@
             <div class="col-12">
                 <div class="d-flex">
                     <h2>Elenco progetti</h2>
-                    <a href="" class="btn btn-sm btn-primary">Aggiungi progetto</a>
+                    <a href="{{ route('admin.projects.create') }}" class="btn btn-sm btn-primary">Aggiungi progetto</a>
                 </div>
             </div>
             <div class="col-12">
@@ -26,7 +26,8 @@
                                 <td>{{ $project->name }}</td>
                                 <td>{{ $project->slug }}</td>
                                 <td>
-                                    <a href="" class="btn btn-sm btn-primary">
+                                    <a href="{{ route('admin.projects.show', ['project' => $project->id]) }}";
+                                        class="btn btn-sm btn-primary">
                                         <i class="fas fa-eye"></i>
                                     </a>
                                 </td>
