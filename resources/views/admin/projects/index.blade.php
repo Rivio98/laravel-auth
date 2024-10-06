@@ -4,9 +4,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <div class="d-flex">
+                <div>
                     <h2>Elenco progetti</h2>
-                    <a href="{{ route('admin.projects.create') }}" class="btn btn-sm btn-primary">Aggiungi progetto</a>
+                    <a href="{{ route('admin.projects.create') }}" class="btn btn-primary my-4">Aggiungi progetto</a>
                 </div>
             </div>
             <div class="col-12">
