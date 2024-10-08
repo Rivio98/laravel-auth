@@ -16,7 +16,7 @@
                         </ul>
                     </div>
                 @endif
-                <form action="{{ route('admin.projects.store') }}" method="post">
+                <form action="{{ route('admin.projects.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
                         <div class="col-12">
@@ -26,7 +26,7 @@
                         </div>
                         <div class="col-12">
                             <label for="" class="control-label">Foto Progetto</label>
-                            <textarea name="description" id="" cols="30" rows="10" class="form-control form-control-sm"></textarea>
+                            <input type="file" name="" id="">
                         </div>
                         <div class="col-12">
                             <label for="" class="control-label">Descrizione progetto</label>
