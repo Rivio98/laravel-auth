@@ -9,7 +9,6 @@
                     <a href="{{ route('admin.projects.create') }}" class="btn btn-primary">Aggiungi Progetto</a>
                 </div>
             </div>
-
             <div class="col-12">
                 <div class="table-responsive">
                     <table class="table table-striped table-hover">
