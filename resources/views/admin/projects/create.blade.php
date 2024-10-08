@@ -25,6 +25,10 @@
                                 placeholder="Nome Progetto">
                         </div>
                         <div class="col-12">
+                            <label for="" class="control-label">Foto Progetto</label>
+                            <textarea name="description" id="" cols="30" rows="10" class="form-control form-control-sm"></textarea>
+                        </div>
+                        <div class="col-12">
                             <label for="" class="control-label">Descrizione progetto</label>
                             <textarea name="description" id="" cols="30" rows="10" class="form-control form-control-sm"></textarea>
                         </div>
